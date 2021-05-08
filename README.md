@@ -1,14 +1,23 @@
 # assets_generator
 
-A new Flutter package project.
+To generate indexed constants for your assets in dart/flutter project! Inspired by android R.java concept
 
-## Getting Started
+## Installation
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+```yaml
+dev_dependencies:
+  assets_generator: <latest-version>
+```
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+also, don't forget to add 
+
+```yaml
+dev_dependencies:
+  build_runner:
+```
+
+## Usage
+
+```
+flutter packages pub run build_runner build
+````

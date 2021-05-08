@@ -21,3 +21,26 @@ dev_dependencies:
 ```
 flutter packages pub run build_runner build
 ````
+
+## Output
+
+you can find your generated assets classes in `lib/generated/<asset_dir_name>.asset.dart`
+
+## Example usage
+
+```dart
+import 'package:example_app/generated/images.dart';
+import 'package:flutter/material.dart';
+
+class Home extends StatelessWidget{
+
+    @override
+    Widget build(BuildContext context){
+        return Scaffold(
+            body: Center(
+                child: Image.asset(Images.icon,width: 100)
+            )
+        )
+    }
+}
+```

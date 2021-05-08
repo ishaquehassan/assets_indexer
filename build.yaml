@@ -1,0 +1,24 @@
+targets:
+  $default:
+    builders:
+      assets_generator|assets_generator:
+        enabled: True
+
+additional_public_assets:
+  - ./../
+
+builders:
+  assets_generator:
+    import: 'package:assets_generator/assets_generator.dart'
+    builder_factories: ['assetsGenerator']
+    build_extensions:
+      .jpg:
+        - .assets.dart
+      .png:
+        - .assets.dart
+      .webp:
+        - .assets.dart
+      .gif:
+        - .assets.dart
+    auto_apply: dependents
+    build_to: source

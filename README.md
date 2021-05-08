@@ -1,4 +1,4 @@
-# assets_generator
+# assets_indexer
 
 To generate indexed constants for your assets in dart/flutter project! Inspired by android R.java concept
 
@@ -6,7 +6,7 @@ To generate indexed constants for your assets in dart/flutter project! Inspired 
 
 ```yaml
 dev_dependencies:
-  assets_generator: <latest-version>
+  assets_indexer: <latest-version>
 ```
 
 also, don't forget to add 

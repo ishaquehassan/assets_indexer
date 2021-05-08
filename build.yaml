@@ -1,16 +1,16 @@
 targets:
   $default:
     builders:
-      assets_generator|assets_generator:
+      assets_indexer|assets_indexer:
         enabled: True
 
 additional_public_assets:
   - ./../
 
 builders:
-  assets_generator:
-    import: 'package:assets_generator/assets_generator.dart'
-    builder_factories: ['assetsGenerator']
+  assets_indexer:
+    import: 'package:assets_indexer/assets_indexer.dart'
+    builder_factories: ['assetsIndexer']
     build_extensions:
       .jpg:
         - .assets.dart

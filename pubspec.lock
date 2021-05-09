@@ -267,6 +267,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.0"
+  numbers_to_words:
+    dependency: "direct main"
+    description:
+      name: numbers_to_words
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.2"
   package_config:
     dependency: transitive
     description:

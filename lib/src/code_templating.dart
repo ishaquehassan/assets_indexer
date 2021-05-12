@@ -36,15 +36,15 @@ String getStringKeysCodeFromMap(Map<dynamic, dynamic> sourceMap) {
 }
 
 class StringsClassInfo {
-  final String className;
-  final List<PropertyInfo> keys;
+  final String? className;
+  final List<PropertyInfo>? keys;
 
   StringsClassInfo({this.className, this.keys});
 }
 
 class PropertyInfo {
-  final String propertyName;
-  final String propertyValue;
+  final String? propertyName;
+  final String? propertyValue;
 
   PropertyInfo({this.propertyName, this.propertyValue});
 }

@@ -13,3 +13,7 @@
 * Version conflicts issue resolved with build_runner for both older and new dependents
 * Example added
 * Multiple directories with same name will be merged in same class and can be differentiated by their parent dir name prefix
+
+## [0.0.4] - Added font family names indexing 🥳
+
+* Now when you add `flutter > fonts` in your pubspec.yaml, it will automatically indexed in app_fonts.asset.dart class which can be referenced by AppFonts.<yourFontName>

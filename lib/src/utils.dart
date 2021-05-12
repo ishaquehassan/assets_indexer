@@ -2,6 +2,8 @@ import 'dart:io';
 
 import 'package:numbers_to_words/numbers_to_words.dart';
 
+import 'code_templating.dart';
+
 const String genFileSuffix = ".asset.dart";
 
 List<String> keywords =
@@ -30,4 +32,11 @@ Future<File> createClass(String path) async {
   } else {
     return Future.value(myFile);
   }
+}
+
+Future<void> filePutContents(
+    String fileName, Map<dynamic, dynamic> classData) async {
+  String classPath = './lib/generated/${fileName}$genFileSuffix';
+  File file = await createClass(classPath);
+  await file.writeAsString(getStringKeysCodeFromMap(classData));
 }

@@ -7,9 +7,13 @@ import 'utils.dart';
 class AssetsBuilder implements Builder {
   AssetsBuilder(BuilderOptions options) {}
 
+  List<String> get imagesExt => [".jpg", ".png", ".webp", ".gif"];
+
   @override
   FutureOr<void> build(BuildStep buildStep) async {
-    await indexImages(buildStep);
+    if (imagesExt.contains(buildStep.fileExtension)) {
+      await indexImages(buildStep);
+    }
     await indexFonts();
   }
 
@@ -18,6 +22,7 @@ class AssetsBuilder implements Builder {
         ".jpg": [genFileSuffix],
         ".png": [genFileSuffix],
         ".webp": [genFileSuffix],
-        ".gif": [genFileSuffix]
+        ".gif": [genFileSuffix],
+        ".yaml": [genFileSuffix]
       };
 }

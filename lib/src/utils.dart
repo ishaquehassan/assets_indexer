@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:build/build.dart';
 import 'package:numbers_to_words/numbers_to_words.dart';
 
 import 'code_templating.dart';
@@ -39,4 +40,10 @@ Future<void> filePutContents(
   String classPath = './lib/generated/${fileName}$genFileSuffix';
   File file = await createClass(classPath);
   await file.writeAsString(getStringKeysCodeFromMap(classData));
+}
+
+extension BuildStepExt on BuildStep {
+  String get fileExtension {
+    return inputId.path.split("/").last.split(".").last;
+  }
 }

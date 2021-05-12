@@ -9,7 +9,6 @@ Future<void> indexImages(BuildStep buildStep) async {
   List<String> fileParts = filePath.split("/");
   String fileName = fileParts.last;
   String fileBaseName = camelCase(clean(fileName.split(".").first));
-  String fileExtension = fileName.split(".").last;
   if (keywords.contains(fileBaseName)) {
     log.warning(
         "SKIPPING : $fileName contains language keywords. Consider renameing it");

@@ -1,6 +1,6 @@
 name: assets_indexer
 description: To generate indexed constants for your assets in dart/flutter project! Inspired by android R.java concept
-version: 0.0.4
+version: 0.0.5
 homepage: https://github.com/ishaquehassan/assets_indexer
 
 environment:

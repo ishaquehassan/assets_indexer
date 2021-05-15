@@ -18,6 +18,23 @@
 
 * Now when you add `flutter > fonts` in your pubspec.yaml, it will automatically indexed in app_fonts.asset.dart class which can be referenced by AppFonts.<yourFontName>
 
-## [0.0.5] - Added font family names indexing 
+## [0.0.5] - Bugs Fixes
 
 * Bugs fixes
+
+## [0.0.6] - Breaking changes - Bugs Fixes
+
+* Fixed indexing for new files in existing dir
+* Auto removing files from generated dir when dir is removed
+* Null-safety opt-in
+* Now assets dirs are linked to pubspec.yaml declarations from `flutter > assets` list
+
+## [0.0.7] - Dart doc issues fixed
+
+* Dartdoc generated
+* Removed not-required keywords
+* Combined both indexers in single file
+
+## [0.0.8] - Font family generation issue fixed
+
+* Font family generation issue fixed

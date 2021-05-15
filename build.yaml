@@ -1,27 +1,36 @@
 targets:
   $default:
     builders:
-      assets_indexer|assets_indexer:
+      assets_indexer|assetsIndexer:
         enabled: True
 
 additional_public_assets:
   - ./../
 
 builders:
-  assets_indexer:
+  assetsIndexer:
     import: 'package:assets_indexer/assets_indexer.dart'
     builder_factories: ['assetsIndexer']
     build_extensions:
       .jpg:
-        - .assets.dart
+        - .asset.dart
       .png:
-        - .assets.dart
+        - .asset.dart
       .webp:
-        - .assets.dart
+        - .asset.dart
       .gif:
-        - .assets.dart
-        - .assets.dart
+        - .asset.dart
+    auto_apply: dependents
+    build_to: source
+  fontFamiliesIndexer:
+    import: 'package:assets_indexer/assets_indexer.dart'
+    builder_factories: ['fontFamiliesIndexer']
+    build_extensions:
       .yaml:
-        - .assets.dart
+        - .asset.dart
+      .ttf:
+        - .asset.dart
+      .otf:
+        - .asset.dart
     auto_apply: dependents
     build_to: source

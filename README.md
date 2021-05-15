@@ -6,7 +6,7 @@ To generate indexed constants for your assets in dart/flutter project! Inspired 
 
 ```yaml
 dev_dependencies:
-  assets_indexer: <latest-version>
+  assets_indexer: ^0.0.6
 ```
 
 also, don't forget to add 
@@ -28,8 +28,18 @@ you can find your generated assets classes in `lib/generated/<asset_dir_name>.as
 
 ## Example usage
 
+#### in your `pubspec.yaml`
+
+```yamnl
+flutter:
+  assets:
+    - assets/images
+```
+
+#### in your `<widget>.dart` file 
+
 ```dart
-import 'package:example_app/generated/images.dart';
+import 'package:example_app/generated/images.asset.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget{

@@ -49,7 +49,6 @@ preExecuter(AssetsBuilder builder) {
         if (assetPath.endsWith("/") || assetPath.endsWith("\\")) {
           assetPath = assetPath.replaceRange(
               assetPath.length - 1, assetPath.length, '');
-          print(assetPath);
         }
         if (!assetPath.contains(".") && (await Directory(assetPath).exists())) {
           assetDirs.add(assetPath);
@@ -64,6 +63,7 @@ preExecuter(AssetsBuilder builder) {
       }
     }
     assetDirs = assetDirs.map((e) => snakeCase(e.split("/").last)).toList();
+    if (Platform.isWindows) return;
     for (var file in directory.listSync()) {
       if (file.existsSync() &&
           file.path.split("/").last != "app_fonts.asset.dart") {

@@ -71,6 +71,7 @@ class AssetsBuilder implements Builder {
         ".jpg": [genFileSuffix],
         ".png": [genFileSuffix],
         ".webp": [genFileSuffix],
-        ".gif": [genFileSuffix]
+        ".gif": [genFileSuffix],
+        ".svg": [genFileSuffix]
       };
 }
